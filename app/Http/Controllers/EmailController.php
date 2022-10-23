@@ -11,7 +11,7 @@ class EmailController extends Controller
 {
     public function sendEmail()
 {
-    $email = 'hotelemail@gmail.com';
+    $email = 'empizzy@gmail.com';
     $details = [
         'header' => 'New Reservatio Booked',
         'body' => 'This is to notify you that a customer have booked a reservation and paid successfully',
