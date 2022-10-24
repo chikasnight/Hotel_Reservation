@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use App\Models\AddressConfirmation;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\EmailController;
@@ -8,6 +9,8 @@ use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\AvailableRoomController;
 
 
+//Route::post('/merchant_address_verification', [DashboardController::class, 'verifyMerchantAddress']);
+Route::post('/address_upload', [AddressConfirmation::class, 'addressConfirmation']);
 
 
 Route::post('register',[AdminController::class,'register']);

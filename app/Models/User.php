@@ -44,4 +44,7 @@ class User extends Authenticatable
     public function reservation(){
         return $this->hasMany(AvailableRoom::class);
     }
+    public function addressUpload(){
+        return $this->hasOne(AddressConfirmation::class);
+    }
 }
