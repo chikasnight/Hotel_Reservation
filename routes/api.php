@@ -19,6 +19,10 @@ Route::post('images',[GalleryController::class,'reservationImage']);
 Route::get('reservations/{availableRoomId}',[AvailableRoomController::class, 'getReservation']);
 Route::post('/sendEmail',[EmailController::class,'sendEmail']);
 
+
+Route::post('stripe',[AvailableRoomController::class, 'stripePost']);
+
+
 Route::group(['middleware' =>'auth:sanctum'],function(){
     Route::post('logout',[AdminController::class,'logout']);
     Route::post('reservations',[AvailableRoomController::class, 'newReservation']);
